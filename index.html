@@ -1994,6 +1994,26 @@
             })();
         </script>
 
+        <script>
+            (function(){
+                function startHeroCarousel(){
+                    var imgs = document.querySelectorAll('.hero-carousel-img');
+                    if(imgs.length < 2) return;
+                    var i = 0;
+                    setInterval(function(){
+                        imgs[i].classList.remove('is-active');
+                        i = (i + 1) % imgs.length;
+                        imgs[i].classList.add('is-active');
+                    }, 4500);
+                }
+                if(document.readyState !== 'loading'){
+                    startHeroCarousel();
+                } else {
+                    document.addEventListener('DOMContentLoaded', startHeroCarousel);
+                }
+            })();
+        </script>
+
 <script>
 /* Aurora image guard: any failed/empty image -> on-brand gradient SVG so nothing ever looks broken. */
 (function(){

@@ -4,6 +4,15 @@ html {
   font-family: sans-serif;
 }
 
+#booking {
+  scroll-margin-top: 120px;
+  transition: box-shadow 0.3s ease;
+}
+
+#booking.is-highlighted {
+  box-shadow: 0 0 0 4px rgba(14, 159, 137, 0.4), 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
 body {
   margin: 0;
 }
